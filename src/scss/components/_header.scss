@@ -1,0 +1,126 @@
+.header {
+  /* .header__container */
+  padding: 5.2rem 0 4rem;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 40rem;
+    background: $headerBg;
+    z-index: -1;
+    pointer-events: 0;
+  }
+  &__container {
+  }
+
+  /* .header__inner */
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* .header__content-box */
+
+  &__content-box {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  /* .header__logo-box */
+
+  &__logo-box {
+    width: 26rem;
+    height: 5.7rem;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* .header__add-card-btn */
+
+  &__add-card-btn {
+    padding: 1.9rem 7rem;
+    border-radius: 10rem;
+    background: $light-grey;
+  }
+
+  /* .header__user-box */
+
+  &__user-box {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  /* .header__enter-btn */
+
+  &__enter-btn {
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid $light-grey;
+    border-radius: 5rem;
+  }
+
+  /* .header__enter-btn-svg-wrapper */
+
+  &__enter-btn-svg-wrapper {
+    width: 6.2rem;
+    height: 6.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $light-grey;
+    border-radius: 50%;
+  }
+
+  /* .header__enter-btn-svg-box */
+
+  &__enter-btn-svg-box {
+    width: 2.5rem;
+    height: 2.5rem;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* .header__enter-btn-text */
+
+  &__enter-btn-text {
+    padding: 0 3.2rem 0 1.6rem;
+  }
+
+  /* .header__favorite-btn */
+
+  &__favorite-btn {
+    width: 6.2rem;
+    height: 6.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $light-grey;
+    border-radius: 50%;
+  }
+
+  /* .header__favorite-btn-svg-box */
+
+  &__favorite-btn-svg-box {
+    width: 2.7rem;
+    height: 2.5rem;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Каталог выбранно</title>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+  <div class="header__container container">
+    <div class="header__inner">
+      <div class="header__content-box">
+        <div class="header__logo-box">
+          <img src="./assets/images/logo.webp" alt="logo">
+        </div>
+        <a href="#" class="header__add-card-btn txt18 txt18_medium">Добавить карточку</a>
+      </div>
+      <div class="header__user-box">
+        <button class="header__enter-btn">
+          <div class="header__enter-btn-svg-wrapper">
+            <div class="header__enter-btn-svg-box">
+              <img src="./assets/images/user.svg" alt="user">
+            </div>
+          </div>
+          <p class="header__enter-btn-text txt18 txt18_regular">Войти</p>
+        </button>
+        <a href="" class="header__favorite-btn">
+          <div class="header__favorite-btn-svg-box">
+            <img src="./assets/images/favoriteGreen.svg" alt="favorite">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="fancybox-bg">
+</div>
+      
+      <main>
+        <section class="catalog">
+          <div class="catalog__container container">
+            <div class="catalog__inner">
+              <div class="catalog__search-wrapper">
+                <div class="catalog__search-box">
+    <label class="catalog__search">
+      <span class="catalog__search-svg-box">
+        <img src="./assets/images/search.svg" alt="search">
+      </span>
+      <input type="text" class="catalog__search-input txt18 txt18_regular" placeholder="Поиск">
+      <span class="catalog__search-btn-box">
+        <button class="catalog__search-btn catalog__search-btn--enter">
+          <div class="catalog__search-btn-svg-box">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.333 12.5L16.333 7.5M21.333 12.5L16.333 17.5M21.333 12.5H3.33301" stroke="#29CC01" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </button>
+        <button class="catalog__search-btn catalog__search-btn--clear">
+          <div class="catalog__search-btn-svg-box">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <mask id="mask0_2141_16441" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="10" height="10">
+                <rect x="7" y="7" width="10" height="10" fill="url(#pattern0_2141_16441)"></rect>
+              </mask>
+              <g mask="url(#mask0_2141_16441)">
+                <rect class="svgFill" x="7" y="7" width="10" height="10" fill="#29CC01"></rect>
+              </g>
+              <defs>
+                <pattern id="pattern0_2141_16441" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_2141_16441" transform="scale(0.00195312)"></use>
+                </pattern>
+                <image id="image0_2141_16441" width="512" height="512" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"></image>
+              </defs>
+            </svg>
+          </div>
+        </button>
+      </span>
+    </label>
+</div>
+                <ul class="catalog__selected-tab-list">
+  <li class="catalog__selected-tab-item txt18 txt18_regular isActive">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White Активное Отбеливание Sensodyne Clinical White Активное Отбеливание </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+  <li class="catalog__selected-tab-item txt18 txt18_regular ">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+  <li class="catalog__selected-tab-item txt18 txt18_regular ">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+  <li class="catalog__selected-tab-item txt18 txt18_regular ">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+  <li class="catalog__selected-tab-item txt18 txt18_regular ">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+  <li class="catalog__selected-tab-item txt18 txt18_regular ">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White Активное Отбеливание Sensodyne Clinical White Активное Отбеливание </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+</ul>
+
+                <ul class="catalog__main-tab-list">
+    <li class="catalog__main-tab-item txt18 txt18_regular isActive">медиа баннер</li>
+    <li class="catalog__main-tab-item txt18 txt18_regular">мастер баннер</li>
+    <li class="catalog__main-tab-item txt18 txt18_regular">ВИДЕО баннер</li>
+  </ul>
+              </div>
+              <div class="catalog__catalog">
+            
+                <div class="catalog__filters">
+  <div class="catalog__filters-list">
+    <div class="catalog__filters-block">
+      <p class="catalog__filters-title txt18 txt18_medium">Бренд</p>
+
+      <div class="catalog__filters-form-box">
+        <label class="catalog__filters-search-box">
+          <div class="catalog__filters-search-loupe-box">
+            <img src="./assets/images/loupeFilterSearch.svg" alt="search">
+          </div>
+          <input type="text" class="catalog__filters-search-input txt18 txt18_regular" placeholder="Поиск">
+          <button class="catalog__filters-search-clear-btn">
+            <img src="./assets/images/clear.svg" alt="search">
+          </button>
+        </label>
+        <form action="" class="catalog__filters-form txt18 txt18_regular">
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input" checked="">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Sensodyne</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Вольтарен</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Зовиракс</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Корега</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Терафлю</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Отривин</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Бифиформ</span>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <div class="catalog__filters-block">
+      <p class="catalog__filters-title txt18 txt18_medium">Пероид действия</p>
+      <div class="catalog__filters-datepicker-box">
+        <label class="catalog__filters-datepicker-label">
+          <input id="datepicker1" class="catalog__filters-datepicker" readonly="" placeholder="С">
+          <div class="catalog__filters-datepicker-svg-box">
+            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.999585 1.53906L8.57499 8.46047L16.1504 1.53906" stroke="#1D1F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </label>
+        <label class="catalog__filters-datepicker-label">
+          <input id="datepicker2" class="catalog__filters-datepicker" readonly="" placeholder="По">
+          <div class="catalog__filters-datepicker-svg-box">
+            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.999585 1.53906L8.57499 8.46047L16.1504 1.53906" stroke="#1D1F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="catalog__filters-block">
+      <p class="catalog__filters-title txt18 txt18_medium">Площадка</p>
+
+      <div class="catalog__filters-form-box">
+        <label class="catalog__filters-search-box">
+          <div class="catalog__filters-search-loupe-box">
+            <img src="./assets/images/loupeFilterSearch.svg" alt="search">
+          </div>
+          <input type="text" class="catalog__filters-search-input txt18 txt18_regular" placeholder="Поиск">
+          <button class="catalog__filters-search-clear-btn">
+            <img src="./assets/images/clear.svg" alt="search">
+          </button>
+        </label>
+        <form action="" class="catalog__filters-form txt18 txt18_regular">
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Apteka.ru</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Stolichki</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Будь Здоров</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Отдел Сертификации</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Apteka.ru</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Stolichki</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Будь Здоров</span>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <div class="catalog__filters-block">
+      <p class="catalog__filters-title txt18 txt18_medium">Карточек на странице</p>
+      <div class="catalog__filters-count-card-list">
+        <label class="catalog__filters-count-card-label">
+          <input type="radio" name="countCard" class="catalog__filters-count-card-label-input" checked="">
+          <span class="catalog__filters-count-card-text">6</span>
+        </label>
+        <label class="catalog__filters-count-card-label">
+          <input type="radio" name="countCard" class="catalog__filters-count-card-label-input">
+          <span class="catalog__filters-count-card-text">12</span>
+        </label>
+        <label class="catalog__filters-count-card-label">
+          <input type="radio" name="countCard" class="catalog__filters-count-card-label-input">
+          <span class="catalog__filters-count-card-text">18</span>
+        </label>
+        <label class="catalog__filters-count-card-label">
+          <input type="radio" name="countCard" class="catalog__filters-count-card-label-input">
+          <span class="catalog__filters-count-card-text">24</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- <button>тут будет кнопка очищения и возвращения к предыдущей странице</button> -->
+</div>
+
+                <div class="catalog__query-list-box observer">
+  <ul class="catalog__query-list selected-list">
+    <li class="catalog__query-item selected-card">
+      <div class="selected-card__img-swiper-box">
+        <button class="selected-card__img-slide-share-btn selected-card__img-slide-btn">
+          <div class="selected-card__img-slide-btn-img-box">
+            <img src="./assets/images/share.svg" alt="share">
+          </div>
+        </button>
+        <div class="selected-card__img-swiper swiper">
+          <div class="selected-card__img-swiper-wrapper swiper-wrapper">
+            <div class="selected-card__img-slide swiper-slide">
+              <a data-fancybox="gallery7" href="./assets/images/cardImg.webp" class="selected-card__img-box">
+                <img src="./assets/images/cardImg.webp" alt="card image">
+              </a>
+            </div>
+            <div class="selected-card__img-slide swiper-slide">
+              <a data-fancybox="gallery7" href="./assets/images/catalogMain/catalogMain1.webp" class="selected-card__img-box">
+                <img src="./assets/images/catalogMain/catalogMain1.webp" alt="card image">
+              </a>
+            </div>
+          </div>
+          <div class="selected-card__img-swiper-pagination swiper-pagination"></div>
+        </div>
+        <div class="selected-card__img-slide-loupe-btn selected-card__img-slide-btn">
+          <div class="selected-card__img-slide-btn-img-box">
+            <img src="./assets/images/loupe.svg" alt="share">
+          </div>
+        </div>
+      </div>
+
+      <div class="selected-card__content-box">
+        <div class="selected-card__info-box">
+          <div class="selected-card__info-content-box">
+            <a href="#" class="selected-card__info-content-link">
+              <div class="selected-card__info-title-box">
+                <p class="selected-card__info-title txt28 txt28_regular">Мастер баннер Sensodyne</p>
+                <ul class="selected-card__info-list">
+                  <li class="selected-card__info-item selected-card__info-item--category txt16 txt16_medium">Мастер баннер</li>
+                  <li class="selected-card__info-item selected-card__info-item--time txt16 txt16_medium">
+                    Декабрь 2024-Январь 2025
+                  </li>
+                </ul>
+              </div>
+              <div class="selected-card__info-communication-box">
+                <div class="selected-card__info-communication">
+                  <div class="selected-card__info-communication-svg-box">
+                    <img src="./assets/images/buy.svg" alt="buy">
+                  </div>
+                  <p class="selected-card__info-communication-title selected-card__info-communication-title--ellipsis txt15 txt15_regular">
+                    Зубная паста Sensodyne Clinical White Активное Отбеливание Зубная паста Sensodyne Clinical White Активное
+                    Отбеливание
+                  </p>
+                </div>
+                <div class="selected-card__info-communication-wrapper">
+                  <div class="selected-card__info-communication">
+                    <div class="selected-card__info-communication-svg-box">
+                      <img src="./assets/images/work.svg" alt="work">
+                    </div>
+                    <p class="selected-card__info-communication-title txt15 txt15_regular">Отдел маркетинга</p>
+                  </div>
+                  <div class="selected-card__info-communication">
+                    <div class="selected-card__info-communication-svg-box">
+                      <img src="./assets/images/profile.svg" alt="profile">
+                    </div>
+                    <p class="selected-card__info-communication-title txt15 txt15_regular">Чеки из Аптеки</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <div class="selected-card__info-swiper-box">
+              <div class="selected-card__info-swiper swiper">
+                <div class="selected-card__info-swiper-wrapper swiper-wrapper">
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-card__info-swiper-navigation swiper-navigation">
+                <div class="selected-card__info-swiper-navigation--left swiper-button-prev">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2188_18280)">
+                      <path d="M20.3066 11.731C20.5885 11.731 20.8169 11.5025 20.8169 11.2207C20.8169 10.9389 20.5885 10.7104 20.3066 10.7104V11.731ZM0.894501 10.8599C0.695215 11.0592 0.695215 11.3823 0.894501 11.5815L4.14205 14.8291C4.34133 15.0284 4.66444 15.0284 4.86372 14.8291C5.06301 14.6298 5.06301 14.3067 4.86372 14.1074L1.97702 11.2207L4.86372 8.334C5.06301 8.13471 5.06301 7.8116 4.86372 7.61232C4.66444 7.41303 4.34133 7.41303 4.14205 7.61232L0.894501 10.8599ZM20.3066 10.7104L1.25534 10.7104V11.731L20.3066 11.731V10.7104Z" fill="white"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2188_18280">
+                        <rect width="21.3333" height="21.3333" fill="white" transform="matrix(-1 0 0 1 21.667 0.333984)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="selected-card__info-swiper-navigation--right swiper-button-next">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2188_18280)">
+                      <path d="M1.69434 11.731C1.4125 11.731 1.18403 11.5025 1.18403 11.2207C1.18403 10.9389 1.4125 10.7104 1.69434 10.7104V11.731ZM21.1065 10.8599C21.3058 11.0592 21.3058 11.3823 21.1065 11.5815L17.8589 14.8291C17.6596 15.0284 17.3365 15.0284 17.1373 14.8291C16.938 14.6298 16.938 14.3067 17.1373 14.1074L20.024 11.2207L17.1373 8.334C16.938 8.13471 16.938 7.8116 17.1373 7.61232C17.3365 7.41303 17.6596 7.41303 17.8589 7.61232L21.1065 10.8599ZM1.69434 10.7104L20.7456 10.7104V11.731L1.69434 11.731V10.7104Z" fill="white"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2188_18280">
+                        <rect width="21.3333" height="21.3333" fill="white" transform="translate(0.333984 0.333984)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="selected-card__info-btn-box">
+            <button class="selected-card__info-btn selected-card__info-btn--favorite isActive">
+              <div class="selected-card__info-btn-svg-box">
+                <img src="./assets/images/favoriteWhite.svg" alt="favorite">
+              </div>
+            </button>
+
+            <button class="selected-card__info-btn selected-card__info-btn--edit">
+              <div class="selected-card__info-btn-svg-box">
+                <img src="./assets/images/edit.svg" alt="edit">
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="selected-card__footer-box">
+          <div class="selected-card__www-box">
+            <div class="selected-card__www-label">
+              <p class="selected-card__www-title txt14 txt14_medium">ССЫЛКА на файл</p>
+
+              <div class="selected-card__www-svg-box">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.27238 6L7.53622 10.8094L12.8 6" stroke="#4C4E55" stroke-width="1.66668" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="selected-card__www-popup">
+              <ul class="selected-card__www-popup-list">
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">Figma</a>
+                </li>
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">PSD</a>
+                </li>
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">AI</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="selected-card__zip-box">
+            <div class="selected-card__zip-btn">
+              <p class="selected-card__zip-title txt14 txt14_medium">скачать zip</p>
+
+              <div class="selected-card__zip-svg-box">
+                <img src="./assets/images/downloadGray.svg" alt="dowmload">
+              </div>
+            </div>
+            <div class="selected-card__zip-popup">
+              <div class="selected-card__zip-popup-inner">
+                <div class="selected-card__zip-popup-header">
+                  <p class="selected-card__zip-popup-title txt18 txt18_bold">Выберите формат</p>
+                  <a href="#" class="selected-card__zip-popup-download">
+                    <p class="selected-card__zip-popup-download-text txt14 txt14_medium">СКАЧАТЬ НЕСКОЛЬКО</p>
+                    <div class="selected-card__zip-popup-download-svg-box">
+                      <img src="./assets/images/downloadGray.svg" alt="">
+                    </div>
+                  </a>
+                </div>
+                <form class="selected-card__zip-popup-form">
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">JPEG</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">PDF</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">WEBP</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">TIFF</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">PNG</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">ETC</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="catalog__query-item selected-card">
+      <div class="selected-card__img-swiper-box">
+        <button class="selected-card__img-slide-share-btn selected-card__img-slide-btn">
+          <div class="selected-card__img-slide-btn-img-box">
+            <img src="./assets/images/share.svg" alt="share">
+          </div>
+        </button>
+        <div class="selected-card__img-swiper swiper">
+          <div class="selected-card__img-swiper-wrapper swiper-wrapper">
+            <div class="selected-card__img-slide swiper-slide">
+              <a data-fancybox="gallery8" href="./assets/images/videoTest.mp4" class="selected-card__img-box selected-card__img-box--video">
+                <!-- с видео лагает свайпер, нужна картинка превью -->
+
+                <img src="./assets/images/cardImg.webp" alt="card image">
+                <!-- <video muted playsinline loop src="./assets/images/videoTest.mp4"></video> -->
+              </a>
+            </div>
+            <div class="selected-card__img-slide swiper-slide">
+              <a data-fancybox="gallery8" href="./assets/images/catalogMain/catalogMain1.webp" class="selected-card__img-box">
+                <img src="./assets/images/catalogMain/catalogMain1.webp" alt="card image">
+              </a>
+            </div>
+          </div>
+          <div class="selected-card__img-swiper-pagination swiper-pagination"></div>
+        </div>
+        <div class="selected-card__img-slide-loupe-btn selected-card__img-slide-btn">
+          <div class="selected-card__img-slide-btn-img-box">
+            <img src="./assets/images/loupe.svg" alt="share">
+          </div>
+        </div>
+      </div>
+
+      <div class="selected-card__content-box">
+        <div class="selected-card__info-box">
+          <div class="selected-card__info-content-box">
+            <a href="#" class="selected-card__info-content-link">
+              <div class="selected-card__info-title-box">
+                <p class="selected-card__info-title txt28 txt28_regular">Мастер баннер Sensodyne</p>
+                <ul class="selected-card__info-list">
+                  <li class="selected-card__info-item selected-card__info-item--category txt16 txt16_medium">Мастер баннер</li>
+                  <li class="selected-card__info-item selected-card__info-item--time txt16 txt16_medium">
+                    Декабрь 2024-Январь 2025
+                  </li>
+                </ul>
+              </div>
+              <div class="selected-card__info-communication-box">
+                <div class="selected-card__info-communication">
+                  <div class="selected-card__info-communication-svg-box">
+                    <img src="./assets/images/buy.svg" alt="buy">
+                  </div>
+                  <p class="selected-card__info-communication-title selected-card__info-communication-title--ellipsis txt15 txt15_regular">
+                    Зубная паста Sensodyne Clinical White Активное Отбеливание Зубная паста Sensodyne Clinical White Активное
+                    Отбеливание
+                  </p>
+                </div>
+                <div class="selected-card__info-communication-wrapper">
+                  <div class="selected-card__info-communication">
+                    <div class="selected-card__info-communication-svg-box">
+                      <img src="./assets/images/work.svg" alt="work">
+                    </div>
+                    <p class="selected-card__info-communication-title txt15 txt15_regular">Отдел маркетинга</p>
+                  </div>
+                  <div class="selected-card__info-communication">
+                    <div class="selected-card__info-communication-svg-box">
+                      <img src="./assets/images/profile.svg" alt="profile">
+                    </div>
+                    <p class="selected-card__info-communication-title txt15 txt15_regular">Чеки из Аптеки</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <div class="selected-card__info-swiper-box">
+              <div class="selected-card__info-swiper swiper">
+                <div class="selected-card__info-swiper-wrapper swiper-wrapper">
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-card__info-swiper-navigation swiper-navigation">
+                <div class="selected-card__info-swiper-navigation--left swiper-button-prev">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2188_18280)">
+                      <path d="M20.3066 11.731C20.5885 11.731 20.8169 11.5025 20.8169 11.2207C20.8169 10.9389 20.5885 10.7104 20.3066 10.7104V11.731ZM0.894501 10.8599C0.695215 11.0592 0.695215 11.3823 0.894501 11.5815L4.14205 14.8291C4.34133 15.0284 4.66444 15.0284 4.86372 14.8291C5.06301 14.6298 5.06301 14.3067 4.86372 14.1074L1.97702 11.2207L4.86372 8.334C5.06301 8.13471 5.06301 7.8116 4.86372 7.61232C4.66444 7.41303 4.34133 7.41303 4.14205 7.61232L0.894501 10.8599ZM20.3066 10.7104L1.25534 10.7104V11.731L20.3066 11.731V10.7104Z" fill="white"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2188_18280">
+                        <rect width="21.3333" height="21.3333" fill="white" transform="matrix(-1 0 0 1 21.667 0.333984)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="selected-card__info-swiper-navigation--right swiper-button-next">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2188_18280)">
+                      <path d="M1.69434 11.731C1.4125 11.731 1.18403 11.5025 1.18403 11.2207C1.18403 10.9389 1.4125 10.7104 1.69434 10.7104V11.731ZM21.1065 10.8599C21.3058 11.0592 21.3058 11.3823 21.1065 11.5815L17.8589 14.8291C17.6596 15.0284 17.3365 15.0284 17.1373 14.8291C16.938 14.6298 16.938 14.3067 17.1373 14.1074L20.024 11.2207L17.1373 8.334C16.938 8.13471 16.938 7.8116 17.1373 7.61232C17.3365 7.41303 17.6596 7.41303 17.8589 7.61232L21.1065 10.8599ZM1.69434 10.7104L20.7456 10.7104V11.731L1.69434 11.731V10.7104Z" fill="white"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2188_18280">
+                        <rect width="21.3333" height="21.3333" fill="white" transform="translate(0.333984 0.333984)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="selected-card__info-btn-box">
+            <button class="selected-card__info-btn selected-card__info-btn--favorite">
+              <div class="selected-card__info-btn-svg-box">
+                <img src="./assets/images/favoriteWhite.svg" alt="favorite">
+              </div>
+            </button>
+
+            <button class="selected-card__info-btn selected-card__info-btn--edit">
+              <div class="selected-card__info-btn-svg-box">
+                <img src="./assets/images/edit.svg" alt="edit">
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="selected-card__footer-box">
+          <div class="selected-card__www-box">
+            <div class="selected-card__www-label">
+              <p class="selected-card__www-title txt14 txt14_medium">ССЫЛКА на файл</p>
+
+              <div class="selected-card__www-svg-box">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.27238 6L7.53622 10.8094L12.8 6" stroke="#4C4E55" stroke-width="1.66668" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="selected-card__www-popup">
+              <ul class="selected-card__www-popup-list">
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">Figma</a>
+                </li>
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">PSD</a>
+                </li>
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">AI</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="selected-card__zip-box">
+            <div class="selected-card__zip-btn">
+              <p class="selected-card__zip-title txt14 txt14_medium">скачать zip</p>
+
+              <div class="selected-card__zip-svg-box">
+                <img src="./assets/images/downloadGray.svg" alt="dowmload">
+              </div>
+            </div>
+            <div class="selected-card__zip-popup">
+              <div class="selected-card__zip-popup-inner">
+                <div class="selected-card__zip-popup-header">
+                  <p class="selected-card__zip-popup-title txt18 txt18_bold">Выберите формат</p>
+                  <a href="#" class="selected-card__zip-popup-download">
+                    <p class="selected-card__zip-popup-download-text txt14 txt14_medium">СКАЧАТЬ НЕСКОЛЬКО</p>
+                    <div class="selected-card__zip-popup-download-svg-box">
+                      <img src="./assets/images/downloadGray.svg" alt="">
+                    </div>
+                  </a>
+                </div>
+                <form class="selected-card__zip-popup-form">
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">JPEG</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">PDF</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">WEBP</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">TIFF</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">PNG</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">ETC</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="catalog__query-item selected-card">
+      <div class="selected-card__img-swiper-box">
+        <button class="selected-card__img-slide-share-btn selected-card__img-slide-btn">
+          <div class="selected-card__img-slide-btn-img-box">
+            <img src="./assets/images/share.svg" alt="share">
+          </div>
+        </button>
+        <div class="selected-card__img-swiper swiper">
+          <div class="selected-card__img-swiper-wrapper swiper-wrapper">
+            <div class="selected-card__img-slide swiper-slide">
+              <a data-fancybox="gallery9" href="./assets/images/cardImg.webp" class="selected-card__img-box">
+                <img src="./assets/images/cardImg.webp" alt="card image">
+              </a>
+            </div>
+          </div>
+          <div class="selected-card__img-swiper-pagination swiper-pagination"></div>
+        </div>
+        <div class="selected-card__img-slide-loupe-btn selected-card__img-slide-btn">
+          <div class="selected-card__img-slide-btn-img-box">
+            <img src="./assets/images/loupe.svg" alt="share">
+          </div>
+        </div>
+      </div>
+
+      <div class="selected-card__content-box">
+        <div class="selected-card__info-box">
+          <div class="selected-card__info-content-box">
+            <a href="#" class="selected-card__info-content-link">
+              <div class="selected-card__info-title-box">
+                <p class="selected-card__info-title txt28 txt28_regular">Мастер баннер Sensodyne</p>
+                <ul class="selected-card__info-list">
+                  <li class="selected-card__info-item selected-card__info-item--category txt16 txt16_medium">Мастер баннер</li>
+                  <li class="selected-card__info-item selected-card__info-item--time txt16 txt16_medium">
+                    Декабрь 2024-Январь 2025
+                  </li>
+                </ul>
+              </div>
+              <div class="selected-card__info-communication-box">
+                <div class="selected-card__info-communication">
+                  <div class="selected-card__info-communication-svg-box">
+                    <img src="./assets/images/buy.svg" alt="buy">
+                  </div>
+                  <p class="selected-card__info-communication-title selected-card__info-communication-title--ellipsis txt15 txt15_regular">
+                    Зубная паста Sensodyne Clinical White Активное Отбеливание Зубная паста Sensodyne Clinical White Активное
+                    Отбеливание
+                  </p>
+                </div>
+                <div class="selected-card__info-communication-wrapper">
+                  <div class="selected-card__info-communication">
+                    <div class="selected-card__info-communication-svg-box">
+                      <img src="./assets/images/work.svg" alt="work">
+                    </div>
+                    <p class="selected-card__info-communication-title txt15 txt15_regular">Отдел маркетинга</p>
+                  </div>
+                  <div class="selected-card__info-communication">
+                    <div class="selected-card__info-communication-svg-box">
+                      <img src="./assets/images/profile.svg" alt="profile">
+                    </div>
+                    <p class="selected-card__info-communication-title txt15 txt15_regular">Чеки из Аптеки</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <div class="selected-card__info-swiper-box"></div>
+          </div>
+
+          <div class="selected-card__info-btn-box">
+            <button class="selected-card__info-btn selected-card__info-btn--favorite">
+              <div class="selected-card__info-btn-svg-box">
+                <img src="./assets/images/favoriteWhite.svg" alt="favorite">
+              </div>
+            </button>
+
+            <button class="selected-card__info-btn selected-card__info-btn--edit">
+              <div class="selected-card__info-btn-svg-box">
+                <img src="./assets/images/edit.svg" alt="edit">
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="selected-card__footer-box">
+          <div class="selected-card__www-box">
+            <div class="selected-card__www-label">
+              <p class="selected-card__www-title txt14 txt14_medium">ССЫЛКА на файл</p>
+
+              <div class="selected-card__www-svg-box">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.27238 6L7.53622 10.8094L12.8 6" stroke="#4C4E55" stroke-width="1.66668" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="selected-card__www-popup">
+              <ul class="selected-card__www-popup-list">
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">Figma</a>
+                </li>
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">PSD</a>
+                </li>
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">AI</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="selected-card__zip-box">
+            <div class="selected-card__zip-btn">
+              <p class="selected-card__zip-title txt14 txt14_medium">скачать zip</p>
+
+              <div class="selected-card__zip-svg-box">
+                <img src="./assets/images/downloadGray.svg" alt="dowmload">
+              </div>
+            </div>
+            <div class="selected-card__zip-popup">
+              <div class="selected-card__zip-popup-inner">
+                <div class="selected-card__zip-popup-header">
+                  <p class="selected-card__zip-popup-title txt18 txt18_bold">Выберите формат</p>
+                  <a href="#" class="selected-card__zip-popup-download">
+                    <p class="selected-card__zip-popup-download-text txt14 txt14_medium">СКАЧАТЬ НЕСКОЛЬКО</p>
+                    <div class="selected-card__zip-popup-download-svg-box">
+                      <img src="./assets/images/downloadGray.svg" alt="">
+                    </div>
+                  </a>
+                </div>
+                <form class="selected-card__zip-popup-form">
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">JPEG</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">PDF</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">WEBP</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">TIFF</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">PNG</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">ETC</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="catalog__query-item selected-card">
+      <div class="selected-card__img-swiper-box">
+        <button class="selected-card__img-slide-share-btn selected-card__img-slide-btn">
+          <div class="selected-card__img-slide-btn-img-box">
+            <img src="./assets/images/share.svg" alt="share">
+          </div>
+        </button>
+        <div class="selected-card__img-swiper swiper">
+          <div class="selected-card__img-swiper-wrapper swiper-wrapper">
+            <div class="selected-card__img-slide swiper-slide">
+              <a data-fancybox="gallery10" href="./assets/images/cardImg.webp" class="selected-card__img-box">
+                <img src="./assets/images/cardImg.webp" alt="card image">
+              </a>
+            </div>
+            <div class="selected-card__img-slide swiper-slide">
+              <a data-fancybox="gallery10" href="./assets/images/catalogMain/catalogMain1.webp" class="selected-card__img-box">
+                <img src="./assets/images/catalogMain/catalogMain1.webp" alt="card image">
+              </a>
+            </div>
+          </div>
+          <div class="selected-card__img-swiper-pagination swiper-pagination"></div>
+        </div>
+        <div class="selected-card__img-slide-loupe-btn selected-card__img-slide-btn">
+          <div class="selected-card__img-slide-btn-img-box">
+            <img src="./assets/images/loupe.svg" alt="share">
+          </div>
+        </div>
+      </div>
+
+      <div class="selected-card__content-box">
+        <div class="selected-card__info-box">
+          <div class="selected-card__info-content-box">
+            <a href="#" class="selected-card__info-content-link">
+              <div class="selected-card__info-title-box">
+                <p class="selected-card__info-title txt28 txt28_regular">Мастер баннер Sensodyne</p>
+                <ul class="selected-card__info-list">
+                  <li class="selected-card__info-item selected-card__info-item--category txt16 txt16_medium">Мастер баннер</li>
+                  <li class="selected-card__info-item selected-card__info-item--time txt16 txt16_medium">
+                    Декабрь 2024-Январь 2025
+                  </li>
+                </ul>
+              </div>
+              <div class="selected-card__info-communication-box">
+                <div class="selected-card__info-communication">
+                  <div class="selected-card__info-communication-svg-box">
+                    <img src="./assets/images/buy.svg" alt="buy">
+                  </div>
+                  <p class="selected-card__info-communication-title selected-card__info-communication-title--ellipsis txt15 txt15_regular">
+                    Зубная паста Sensodyne Clinical White Активное Отбеливание Зубная паста Sensodyne Clinical White Активное
+                    Отбеливание
+                  </p>
+                </div>
+                <div class="selected-card__info-communication-wrapper">
+                  <div class="selected-card__info-communication">
+                    <div class="selected-card__info-communication-svg-box">
+                      <img src="./assets/images/work.svg" alt="work">
+                    </div>
+                    <p class="selected-card__info-communication-title txt15 txt15_regular">Отдел маркетинга</p>
+                  </div>
+                  <div class="selected-card__info-communication">
+                    <div class="selected-card__info-communication-svg-box">
+                      <img src="./assets/images/profile.svg" alt="profile">
+                    </div>
+                    <p class="selected-card__info-communication-title txt15 txt15_regular">Чеки из Аптеки</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <div class="selected-card__info-swiper-box">
+              <div class="selected-card__info-swiper swiper">
+                <div class="selected-card__info-swiper-wrapper swiper-wrapper">
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="selected-card__info-swiper-slide swiper-slide">
+                    <div class="selected-card__info-slide-inner">
+                      <div class="selected-card__info-slide-img-wrapper">
+                        <div class="selected-card__info-slide-btn-box"></div>
+                        <a data-fancybox="" href="./assets/images/cardImg.webp" class="selected-card__info-slide-img-box">
+                          <img src="./assets/images/cardImg.webp" alt="card image">
+                        </a>
+                      </div>
+                      <div class="selected-card__info-slide-text-box">
+                        <p class="selected-card__info-slide-size txt12 txt12_regular">1024/240</p>
+                        <a href="#" class="selected-card__info-slide-link txt12 txt12_regular">Apteka.ru</a>
+                        <p class="selected-card__info-slide-department txt12 txt12_regular">Отдел маркетинга</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-card__info-swiper-navigation swiper-navigation">
+                <div class="selected-card__info-swiper-navigation--left swiper-button-prev">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2188_18280)">
+                      <path d="M20.3066 11.731C20.5885 11.731 20.8169 11.5025 20.8169 11.2207C20.8169 10.9389 20.5885 10.7104 20.3066 10.7104V11.731ZM0.894501 10.8599C0.695215 11.0592 0.695215 11.3823 0.894501 11.5815L4.14205 14.8291C4.34133 15.0284 4.66444 15.0284 4.86372 14.8291C5.06301 14.6298 5.06301 14.3067 4.86372 14.1074L1.97702 11.2207L4.86372 8.334C5.06301 8.13471 5.06301 7.8116 4.86372 7.61232C4.66444 7.41303 4.34133 7.41303 4.14205 7.61232L0.894501 10.8599ZM20.3066 10.7104L1.25534 10.7104V11.731L20.3066 11.731V10.7104Z" fill="white"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2188_18280">
+                        <rect width="21.3333" height="21.3333" fill="white" transform="matrix(-1 0 0 1 21.667 0.333984)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="selected-card__info-swiper-navigation--right swiper-button-next">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2188_18280)">
+                      <path d="M1.69434 11.731C1.4125 11.731 1.18403 11.5025 1.18403 11.2207C1.18403 10.9389 1.4125 10.7104 1.69434 10.7104V11.731ZM21.1065 10.8599C21.3058 11.0592 21.3058 11.3823 21.1065 11.5815L17.8589 14.8291C17.6596 15.0284 17.3365 15.0284 17.1373 14.8291C16.938 14.6298 16.938 14.3067 17.1373 14.1074L20.024 11.2207L17.1373 8.334C16.938 8.13471 16.938 7.8116 17.1373 7.61232C17.3365 7.41303 17.6596 7.41303 17.8589 7.61232L21.1065 10.8599ZM1.69434 10.7104L20.7456 10.7104V11.731L1.69434 11.731V10.7104Z" fill="white"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2188_18280">
+                        <rect width="21.3333" height="21.3333" fill="white" transform="translate(0.333984 0.333984)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="selected-card__info-btn-box">
+            <button class="selected-card__info-btn selected-card__info-btn--favorite isActive">
+              <div class="selected-card__info-btn-svg-box">
+                <img src="./assets/images/favoriteWhite.svg" alt="favorite">
+              </div>
+            </button>
+
+            <button class="selected-card__info-btn selected-card__info-btn--edit">
+              <div class="selected-card__info-btn-svg-box">
+                <img src="./assets/images/edit.svg" alt="edit">
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="selected-card__footer-box">
+          <div class="selected-card__www-box">
+            <div class="selected-card__www-label">
+              <p class="selected-card__www-title txt14 txt14_medium">ССЫЛКА на файл</p>
+
+              <div class="selected-card__www-svg-box">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.27238 6L7.53622 10.8094L12.8 6" stroke="#4C4E55" stroke-width="1.66668" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="selected-card__www-popup">
+              <ul class="selected-card__www-popup-list">
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">Figma</a>
+                </li>
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">PSD</a>
+                </li>
+                <li classname="selected-card__www-popup-item">
+                  <a href="#" class="selected-card__www-popup-link txt18 txt18_bold">AI</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="selected-card__zip-box">
+            <div class="selected-card__zip-btn">
+              <p class="selected-card__zip-title txt14 txt14_medium">скачать zip</p>
+
+              <div class="selected-card__zip-svg-box">
+                <img src="./assets/images/downloadGray.svg" alt="dowmload">
+              </div>
+            </div>
+            <div class="selected-card__zip-popup">
+              <div class="selected-card__zip-popup-inner">
+                <div class="selected-card__zip-popup-header">
+                  <p class="selected-card__zip-popup-title txt18 txt18_bold">Выберите формат</p>
+                  <a href="#" class="selected-card__zip-popup-download">
+                    <p class="selected-card__zip-popup-download-text txt14 txt14_medium">СКАЧАТЬ НЕСКОЛЬКО</p>
+                    <div class="selected-card__zip-popup-download-svg-box">
+                      <img src="./assets/images/downloadGray.svg" alt="">
+                    </div>
+                  </a>
+                </div>
+                <form class="selected-card__zip-popup-form">
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">JPEG</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">PDF</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">WEBP</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">TIFF</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">PNG</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                  <label class="selected-card__zip-popup-label">
+                    <input type="checkbox" class="selected-card__zip-popup-input">
+                    <span class="selected-card__zip-popup-square"></span>
+                    <span class="selected-card__zip-popup-text-box">
+                      <span class="selected-card__zip-popup-input-title txt18 txt18_medium">ETC</span>
+                      <a href="#" class="selected-card__zip-popup-input-svg-wrapper">
+                        <div class="selected-card__zip-popup-input-svg-box">
+                          <img src="./assets/images/downloadGreen.svg" alt="dowmload">
+                        </div>
+                      </a>
+                    </span>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="catalog__query-pagination" data-pages="30" data-current="2">
+    <a class="catalog__query-pagination-btn catalog__query-pagination-btn--prev">
+      <div class="catalog__query-pagination-btn-svg-box">
+        <svg width="30" height="12" viewBox="0 0 30 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29 5.25C29.4142 5.25 29.75 5.58579 29.75 6C29.75 6.41421 29.4142 6.75 29 6.75V5.25ZM0.469669 6.53033C0.176777 6.23744 0.176777 5.76256 0.469669 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989593 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.469669 6.53033ZM29 6.75L1 6.75V5.25L29 5.25V6.75Z" fill="#29CC01"></path>
+        </svg>
+      </div>
+    </a>
+    <span class="catalog__query-pagination-pages-wrapper">
+      <span class="catalog__query-pagination-pages-box"></span>
+    </span>
+    <a class="catalog__query-pagination-btn catalog__query-pagination-btn--next">
+      <div class="catalog__query-pagination-btn-svg-box">
+        <svg width="30" height="12" viewBox="0 0 30 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 6.75C0.585786 6.75 0.25 6.41421 0.25 6C0.25 5.58579 0.585786 5.25 1 5.25L1 6.75ZM29.5303 5.46967C29.8232 5.76256 29.8232 6.23744 29.5303 6.53033L24.7574 11.3033C24.4645 11.5962 23.9896 11.5962 23.6967 11.3033C23.4038 11.0104 23.4038 10.5355 23.6967 10.2426L27.9393 6L23.6967 1.75736C23.4038 1.46447 23.4038 0.989593 23.6967 0.696699C23.9896 0.403806 24.4645 0.403806 24.7574 0.696699L29.5303 5.46967ZM1 5.25L29 5.25V6.75L1 6.75L1 5.25Z" fill="#29CC01"></path>
+        </svg>
+      </div>
+    </a>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

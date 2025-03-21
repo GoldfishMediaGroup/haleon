@@ -1,0 +1,27 @@
+@import '../components/catalogSearch';
+@import '../components/catalogMainTabs';
+@import '../components/catalogMain';
+@import '../components/catalogNotFound';
+@import '../components/catalogSelected';
+@import '../components/catalogSelectedTabs';
+@import '../components/catalogPagination';
+@import '../components/catalogFilters';
+
+.catalog {
+  /* .catalog__container */
+
+  &__container {
+  }
+
+  /* .catalog__inner */
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  &__catalog {
+    position: relative;
+  }
+}

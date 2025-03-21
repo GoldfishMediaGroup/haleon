@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('./assets/fonts/EuclidCircularA-Regular.woff2');
+  src: local('EuclidCircularA-Regular'), local('EuclidCircularA-Regular'),
+    url('./assets/fonts/EuclidCircularA-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('./assets/fonts/EuclidCircularA-Medium.woff2');
+  src: local('EuclidCircularA-Medium'), local('EuclidCircularA-Medium'),
+    url('./assets/fonts/EuclidCircularA-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('./assets/fonts/EuclidCircularA-SemiBold.woff2');
+  src: local('EuclidCircularA-SemiBold'), local('EuclidCircularA-SemiBold'),
+    url('./assets/fonts/EuclidCircularA-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('./assets/fonts/EuclidCircularA-Bold.woff2');
+  src: local('EuclidCircularA-Bold'), local('EuclidCircularA-Bold'),
+    url('./assets/fonts/EuclidCircularA-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('./assets/fonts/Circe-Bold.woff2');
+  src: local('Circe-Bold'), local('Circe-Bold'), url('./assets/fonts/Circe-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/fonts/Gilroy-Regular.woff2');
+  src: local('Gilroy-Regular'), local('Gilroy-Regular'), url('./assets/fonts/Gilroy-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}

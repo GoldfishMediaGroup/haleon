@@ -1,0 +1,446 @@
+// .fancybox {
+//   &__carousel {
+//     border-radius: 6rem !important;
+//     padding: 8rem 12rem !important;
+//     width: 96.2rem !important;
+//     height: 76.2rem !important;
+//     backdrop-filter: blur(50px);
+//     background: rgba(255, 255, 255, 0.6);
+//     flex-grow: 0 !important; /* Не растягиваться */
+//     flex-shrink: 0 !important; /* Не сжиматься */
+//     flex-basis: auto !important; /* Изначальный размер элемента */
+//   }
+
+//   &__viewport {
+//     overflow: hidden;
+//   }
+//   &__backdrop {
+//     background-color: rgba($color: $gray, $alpha: 0.5);
+
+//     backdrop-filter: blur(52px);
+//     -webkit-backdrop-filter: blur(52px);
+//   }
+
+//   // &__toolbar__column {
+//   //   .f-button {
+//   //     position: absolute;
+//   //     right: 12.7rem;
+//   //     top: 4.4rem;
+//   //     width: 3.2rem;
+//   //     height: 3.2rem;
+//   //     color: $black;
+//   //     background: transparent;
+
+//   //     &:hover {
+//   //       background: transparent;
+//   //       color: $black;
+//   //     }
+
+//   //     svg {
+//   //       width: 100%;
+//   //       height: 100%;
+//   //     }
+//   //   }
+//   // }
+
+//   // &__nav {
+//   //   .f-button {
+//   //     &.is-next,
+//   //     &.is-prev {
+//   //       color: $black;
+//   //       box-shadow: none;
+//   //       width: 8rem;
+//   //       height: 8rem;
+//   //       background: $white;
+//   //       border-radius: 0;
+
+//   //       &::before {
+//   //         display: none;
+//   //       }
+
+//   //       svg {
+//   //         width: 4rem!important;;
+//   //         // width: auto;
+//   //         // height: auto;
+//   //         height: 0.8rem!important;
+//   //         stroke-width: 1px;
+//   //         stroke: none;
+//   //       }
+//   //     }
+
+//   //     &.is-next {
+//   //       --f-button-next-pos: 12rem;
+//   //     }
+
+//   //     &.is-prev {
+//   //       --f-button-prev-pos: 12rem;
+//   //     }
+//   //   }
+//   // }
+// }
+
+// //   .has-html5video .fancybox__content {
+// //     width: 139.4rem !important;
+// //     height: 75.7rem !important;
+// //     & > .f-button.is-close-btn {
+// //       --f-button-color: #000;
+// //       --f-button-svg-width: 3.2rem;
+// //       --f-button-svg-height: 3.2rem;
+// //       --f-button-outline-color: transparent;
+// //     }
+// //     @include small-tablet {
+// //       width: 67rem !important;
+// //       height: 49.4rem !important;
+// //     }
+// //   }
+
+// //   .fancybox__html5video {
+// //     object-fit: cover;
+// //   }
+
+// //   .f-button.is-close-btn {
+// //     & svg {
+// //       fill: $black !important;
+// //     }
+// //   }
+// .fancybox__container {
+//   //   top: 50% !important;
+//   //   left: 50% !important;
+//   //   bottom:unset!important;
+//   //   right:unset!important;
+//   //   transform: translate(-50%, -50%) !important;
+//   //   transition: all 0.3s !important;
+//   //   border-radius: 6rem;
+//   //   padding: 8rem 12rem;
+//   //   width: 96.2rem !important;
+//   //   height: 76.2rem !important;
+//   .fancybox__backdrop {
+//     background: rgba(74, 76, 86, 0.45) !important;
+//   }
+
+//   //   overflow: hidden !important;
+
+//   //   .fancybox__backdrop {
+//   //     background-color: #fff;
+//   //     position: absolute !important;
+//   //   }
+
+//   .fancybox__toolbar,
+//   .fancybox__toolbar.is-absolute {
+//     position: absolute;
+//     top: 1.6rem;
+//     right: 4rem;
+//     left: 4rem;
+//   }
+
+//   &.is-compact .fancybox__toolbar {
+//     top: 4.8rem;
+//     left: 3.2rem;
+//     right: 3.2rem;
+//   }
+
+//   .fancybox__nav {
+//     .f-button {
+//       border-radius: 100%;
+//       overflow: hidden;
+//       background-color: rgba(0, 0, 0, 0.3);
+//       width: 3.2rem;
+//       height: 3.2rem;
+
+//       svg {
+//         width: 1.6rem;
+//         height: 2rem;
+//         path {
+//           stroke: #fff;
+//         }
+//       }
+//     }
+
+//     .f-button.is-next {
+//       right: 17rem !important;
+//     }
+
+//     .f-button.is-prev {
+//       left: 17rem !important;
+//     }
+//   }
+
+//   .fancybox__toolbar__column.is-right {
+//     .f-button {
+//       border-radius: 100%;
+//       overflow: hidden;
+//       background-color: rgba(0, 0, 0, 0.3);
+//       width: 3.2rem;
+//       height: 3.2rem;
+
+//       svg {
+//         width: 2rem;
+//         height: 2rem;
+//         path {
+//           stroke: #fff;
+//         }
+//       }
+//     }
+//   }
+//   .fancybox__toolbar__column.is-left {
+//     opacity: 0;
+
+//     .f-button {
+//       background-color: unset;
+//       width: 4.8rem;
+//       height: 4.8rem;
+
+//       svg {
+//         width: 4.8rem;
+//         height: 4.8rem;
+//       }
+//     }
+//   }
+
+//   .fancybox__slide {
+//     padding: 4rem;
+
+//     .fancybox__content {
+//       //   width: 113rem !important;
+//       //   height: 83.2rem !important;
+//       //   transform: unset !important;
+//       background-color: rgba(255, 255, 255, 0.6)!important;
+
+//       border-radius: 2.4rem;
+
+//       backdrop-filter: blur(50px) !important;
+
+//       border-radius: 6rem !important;
+//       padding: 8rem 12rem !important;
+//       width: 96.2rem !important;
+//       height: 76.2rem !important;
+//       display: flex !important;
+//       align-items: center;
+//       justify-content: center;
+//       img {
+//         background: #ebebeb;
+//         object-fit: contain;
+//         width: 100%;
+//         height: 100%;
+
+//         border-radius: 2.4rem;
+//         width: 72.2rem !important;
+//         height: 60.2rem !important;
+//       }
+//     }
+//   }
+
+//   .fancybox__footer {
+//     .f-thumbs__slide {
+//       margin-right: 1.2rem !important;
+//     }
+
+//     .f-thumbs__slide.for-image,
+//     .f-thumbs__slide.for-video {
+//       border-radius: 0.8rem;
+//       overflow: hidden;
+//       height: 8rem;
+//       width: 11.8rem;
+
+//       button {
+//         width: 100%;
+//         height: 100%;
+//       }
+//     }
+//   }
+
+//   .for-video button {
+//     position: relative;
+//     &::before {
+//       content: '';
+//       background: url(./assets/images/play.svg) no-repeat top/contain;
+//       position: absolute;
+//       width: 2.5rem;
+//       height: 2.5rem;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//       z-index: 20;
+//       color: #000;
+//     }
+//     & img {
+//       filter: blur(2px);
+//     }
+//   }
+// }
+
+// .fancybox-bg {
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   background-color: rgba(0, 0, 0, 0.492);
+//   z-index: 1010;
+//   backdrop-filter: blur(6px);
+//   display: none;
+// }
+
+.fancybox__container {
+    position: fixed!important;
+    border-radius: 6rem !important;
+    padding: 8rem 12rem !important;
+    width: 96.2rem !important;
+    height: 76.2rem !important;
+    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, 0.6);
+    top: 50%!important;;
+    left: 50%!important;;
+    transform: translate(-50%, -50%)!important;;
+    border: 0.1rem solid $white;
+    transition: opacity 0.3s;
+  &[aria-hidden="false"] {
+ 
+      opacity: 1;
+   
+    & .fancybox__carousel {
+      opacity: 1;
+    }
+  }
+
+  &[aria-hidden="true"] {
+
+      opacity: 0;
+  
+    & .fancybox__carousel {
+      opacity: 0;
+    }
+  }
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   border-radius: 6rem !important;
+  //   padding: 8rem 12rem !important;
+  //   width: 96.2rem !important;
+  //   height: 76.2rem !important;
+  //   backdrop-filter: blur(50px);
+  //   background: rgba(255, 255, 255, 0.6);
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   border: 0.1rem solid $white;
+  //   transition: opacity 0.3s;
+  // }
+}
+
+.fancybox__carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  overflow: visible!important;
+
+}
+.fancybox__viewport {
+  overflow: hidden !important;
+  border-radius: 2.4rem !important;
+  width: 72.2rem !important;
+  height: 60.2rem !important;
+  
+}
+
+.fancybox__backdrop {
+  background: transparent !important;
+}
+
+.fancybox__toolbar,
+.fancybox__toolbar.is-absolute {
+  position: absolute;
+  width: 96.2rem !important;
+  height: 76.2rem !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+
+  // width: 96.2rem !important;
+}
+
+.fancybox__toolbar__column.is-right .f-button {
+  border-radius: 100%;
+  overflow: hidden;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: $green !important;
+  box-shadow: 0.9rem 0.9rem 2rem 0 rgba(75, 160, 54, 0.15);
+  top: 3.2rem;
+  right: 2.3rem;
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    path {
+      stroke: #fff;
+    }
+  }
+}
+
+.fancybox__nav {
+
+  .f-button {
+    border-radius: 100%;
+    overflow: hidden;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: $blue-grey;
+    box-shadow: 0.9rem 0.9rem 2rem 0 rgba(75, 160, 54, 0.15);
+    &:hover {
+      background-color: $green !important;
+    }
+
+    svg {
+      width: 3.3rem;
+      height: 3.3rem;
+      path {
+        stroke: #fff;
+      }
+    }
+  }
+
+  .f-button.is-next {
+    right: -9.5rem !important;
+  }
+
+  .f-button.is-prev {
+    left: -9.5rem !important;
+  }
+}
+
+.fancybox__slide {
+  padding: 4rem;
+}
+.fancybox__content {
+  width: 113rem !important;
+  height: 83.2rem !important;
+  // transform: unset !important;
+  background-color: #f1f3f3 !important;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  border-radius: 2.4rem !important;
+  img {
+    object-fit: contain;
+  }
+}
+
+.fancybox-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.492);
+  z-index: 1010;
+  backdrop-filter: blur(6px);
+  display: none;
+}

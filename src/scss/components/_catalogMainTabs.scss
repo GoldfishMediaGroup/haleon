@@ -1,0 +1,41 @@
+.catalog {
+  /* .catalog__main-tab-list */
+
+  &__main-tab-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* .catalog__main-tab-item */
+
+  &__main-tab-item {
+    border-radius: 10rem;
+    padding: 1.6rem 2rem;
+    background: $white;
+    text-transform: uppercase;
+    transition: color 0.3s, background 0.3s;
+    cursor: pointer;
+    &:hover,
+    &.isActive {
+      background: $green;
+      color: $white;
+    }
+  }
+
+  /* .catalog__catalog */
+
+  &__catalog {
+    display: flex;
+    gap: 4rem;
+  }
+
+  /* .catalog__filters */
+
+  &__filters {
+    width: 39rem;
+    flex-shrink: 0;
+  }
+
+
+}

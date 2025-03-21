@@ -1,0 +1,258 @@
+.catalog {
+  /* .catalog__filters */
+
+  &__filters {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    margin-bottom: 3.2rem;
+  }
+
+  /* .catalog__filters-list */
+
+  &__filters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  /* .catalog__filters-block */
+
+  &__filters-block {
+    border-radius: 2.5rem;
+    padding: 4rem;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+  }
+
+  /* .catalog__filters-title */
+
+  &__filters-title {
+  }
+
+  /* .catalog__filters-form-box */
+
+  &__filters-form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* .catalog__filters-search-box */
+
+  &__filters-search-box {
+    border-radius: 1rem;
+    padding: 1rem 1.6rem;
+    background: $light-grey;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    width: 100%;
+  }
+
+  /* .catalog__filters-search-loupe-box */
+
+  &__filters-search-loupe-box {
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* .catalog__filters-search-input */
+
+  &__filters-search-input {
+    flex-grow: 1;
+    width: 100%;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  /* .catalog__filters-search-clear-btn */
+
+  &__filters-search-clear-btn {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: -0.5rem;
+    display: none;
+    & img {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  /* .catalog__filters-form */
+
+  &__filters-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    height: 20.2rem;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0.4rem; /* ширина скроллбара */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray; /* цвет ползунка */
+      border-radius: 2rem;
+    }
+    &::-webkit-scrollbar-track {
+      background: #eaeaea; /* цвет трека */
+      border-radius: 2rem;
+    }
+  }
+
+  /* .catalog__filters-label */
+
+  &__filters-label {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    cursor: pointer;
+  }
+
+  /* .catalog__filters-input */
+
+  &__filters-input {
+    position: absolute;
+    opacity: 0;
+    display: block;
+    &:checked {
+      & ~ .catalog__filters-square {
+        border: 0.1rem solid $green;
+        &:before {
+          scale: 1;
+        }
+      }
+    }
+  }
+
+  /* .catalog__filters-square */
+
+  &__filters-square {
+    border: 0.1rem solid transparent;
+    box-shadow: 0.9rem 0.9rem 2rem 0 rgba(69, 82, 82, 0.05);
+    background: $light-grey;
+    border-radius: 1rem;
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border 0.3s;
+    &::before {
+      position: absolute;
+      content: '';
+      scale: 0;
+      transition: scale 0.3s;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url(./assets/images/checked.svg) no-repeat top/cover;
+    }
+  }
+
+  /* .catalog__filters-input-title */
+
+  &__filters-input-title {
+  }
+
+  /* .catalog__filters-count-card-list */
+
+  &__filters-count-card-list {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  /* .catalog__filters-count-card-label */
+
+  &__filters-count-card-label {
+    cursor: pointer;
+    position: relative;
+  }
+
+  /* .catalog__filters-count-card-label-input */
+
+  &__filters-count-card-label-input {
+    position: absolute;
+    opacity: 0;
+    display: block;
+    &:checked {
+      & ~ .catalog__filters-count-card-text {
+        background-color: $green;
+        color: $white;
+        box-shadow: 0.9rem 0.9rem 2rem 0 rgba(75, 160, 54, 0.3);
+      }
+    }
+  }
+
+  /* .catalog__filters-count-card-text */
+
+  &__filters-count-card-text {
+    box-shadow: 0.9rem 0.9rem 2rem 0 rgba(69, 82, 82, 0.05);
+    background: $light-grey;
+    border-radius: 1.2rem;
+    padding: 0.8rem 1.6rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-align: center;
+    color: $gray;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+
+  /* .catalog__filters-datepicker-box */
+
+  &__filters-datepicker-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  /* .catalog__filters-datepicker-label */
+
+  &__filters-datepicker-label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid $blue-grey;
+    border-radius: 0.8rem;
+    padding: 1.6rem 1.2rem;
+    gap: 1rem;
+    cursor: pointer;
+  }
+
+  /* .catalog__filters-datepicker */
+
+  &__filters-datepicker {
+    width: 100%;
+    font-weight: 400;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* .catalog__filters-datepicker-svg-box */
+
+  &__filters-datepicker-svg-box {
+    width: 1.8rem;
+    height: 1rem;
+    & svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
