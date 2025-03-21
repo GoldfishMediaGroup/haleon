@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Каталог главный</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <include src="./components/_header.html"></include>
+      <include src="./components/_popup.html"></include>
+      <main>
+        <section class="catalog">
+          <div class="catalog__container container">
+            <div class="catalog__inner">
+              <div class="catalog__search-wrapper">
+                <include src="./components/_catalogSearch.html"></include>
+       
+              </div>
+              <div class="catalog__catalog">
+
+                <include src="./components/_catalogMain.html"></include>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

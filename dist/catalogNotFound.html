@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Каталог ничего не найдено</title>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+  <div class="header__container container">
+    <div class="header__inner">
+      <div class="header__content-box">
+        <div class="header__logo-box">
+          <img src="./assets/images/logo.webp" alt="logo">
+        </div>
+        <a href="#" class="header__add-card-btn txt18 txt18_medium">Добавить карточку</a>
+      </div>
+      <div class="header__user-box">
+        <button class="header__enter-btn">
+          <div class="header__enter-btn-svg-wrapper">
+            <div class="header__enter-btn-svg-box">
+              <img src="./assets/images/user.svg" alt="user">
+            </div>
+          </div>
+          <p class="header__enter-btn-text txt18 txt18_regular">Войти</p>
+        </button>
+        <a href="" class="header__favorite-btn">
+          <div class="header__favorite-btn-svg-box">
+            <img src="./assets/images/favoriteGreen.svg" alt="favorite">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="fancybox-bg">
+</div>
+      
+      <main>
+        <section class="catalog">
+          <div class="catalog__container container">
+            <div class="catalog__inner">
+              <div class="catalog__search-wrapper">
+                <div class="catalog__search-box">
+    <label class="catalog__search">
+      <span class="catalog__search-svg-box">
+        <img src="./assets/images/search.svg" alt="search">
+      </span>
+      <input type="text" class="catalog__search-input txt18 txt18_regular" placeholder="Поиск">
+      <span class="catalog__search-btn-box">
+        <button class="catalog__search-btn catalog__search-btn--enter">
+          <div class="catalog__search-btn-svg-box">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.333 12.5L16.333 7.5M21.333 12.5L16.333 17.5M21.333 12.5H3.33301" stroke="#29CC01" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </button>
+        <button class="catalog__search-btn catalog__search-btn--clear">
+          <div class="catalog__search-btn-svg-box">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <mask id="mask0_2141_16441" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="10" height="10">
+                <rect x="7" y="7" width="10" height="10" fill="url(#pattern0_2141_16441)"></rect>
+              </mask>
+              <g mask="url(#mask0_2141_16441)">
+                <rect class="svgFill" x="7" y="7" width="10" height="10" fill="#29CC01"></rect>
+              </g>
+              <defs>
+                <pattern id="pattern0_2141_16441" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_2141_16441" transform="scale(0.00195312)"></use>
+                </pattern>
+                <image id="image0_2141_16441" width="512" height="512" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA5nAAAOZwGPiYJxAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVxQTFRF////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJDo9JgAAAHN0Uk5TAAECAwsMDQ4QERITFBUWFxgZGiMkLC4vNjo9Q0RHSFBSVVZXW11iZHB0eHl7fH2BgoOEhouOkJaXmpucnZ6foaOmp6qtrq+xtLW4vL6/wMPFyMnKzM3Oz9DR0tPU1tjZ3+Hl5ujq7O3u7/D09ff4+/z9/khtYVgAAAq7SURBVHja7d39X1tnGYDxO5gJpaKigOiKbLyoEacwZGKHTnE4UKxMG7bVQV1X24gZlN7//+fjD/SNystJQptzvK77D3hOeL4XyQmc5EQUmdpkY2X9L/v//rK5+f7S/Eg4pZyR+aWbm7fvHdy9tb7SmKxd1bL16bX7+eIc7yyMu9tlm/GFneNTTPfXputXsO63Vw/zjNmfrbnn5Zna7P5ZSoeroz0uPPhuO8+Z5pT7XpaZap6n1F4e6qWrnzzIC2Z7wq0vw0xsX6TUagx0u/DXP8qLpz3j7vd/ZtqXMG0Ndrfwdz/PS2fRM4F+v/ovXq60N9bNym8+zAKzUdegn1PfKKLUutH5ynNHWWiawyr0b4abxZSO5jr2f5QFZ9cC+ue/W1Tp0dyr8reAKvh3WkAn/hZQBf/OCujM3wKq4N9JAZ36W0AV/IsX0Lm/BVTBv2gB3fhbQBX8ixXQnb8FVMG/SAHd+ltAFfwvL6B7fwuogv9lBfTibwFV8L+4gN78LaAK/hcV0Ku/BVTB//wCeve3gCr4n1fAVfhbQBX8zy7gavwtoAr+ZxXw5lGmBVD8M49eukZo7GGmBXD8M1unrhMc3Mu0AJJ/5t4L1woPbGZaAMs/c+v55wV+mmkBNP/MxtOlrx2kBfD8s/X0U2PLmRbA889cPln7m/9JCyD6Z/vks8PvZVoA0T9zNSLija/SApj+efhGRLyVaQFM/8y3IuK3aQFU//wgYuBfaQFU/3zwtfh+pgVQ/TN/ED9/petn85qGJfbPd+LXr/YAPgeU2j9/FR+lBXD984/xt7QArn9+HF+kBXD984s4TAvg+udhtNICuP75MPbSArj++XlspwVw/fPP8fu0AK5//i5W0gK4/vnL+NHrOpR/FS6hf/44vvU4fQ7A+j/+TsTHaQFU//x7RPwsLYDqn+9ExERaANU/JyIi/mEBVP/9iHiVV4VaQLn9c/bkqLctgOnffHLDnx+mBRD989mN//5qAUT/7WdH/l7bAnj+7Rdu+/j2Ywug+eepmz7+Ii0A5r946vC1Dy2A5b/x0i0/600LIPk3631/CBZQss23ALa/BdD9LYDubwF0fwug+1sA3d8C6P4WQPe3ALq/BdD9LYDubwF0fwug+1sA3d8C6P4WQPe3ALq/BdD9LYDubwF0fwug+1sA3d8C6P4WQPe3ALq/BdD9LSDw22gB9E20APoWWgB9Ay2Avn0WQN88C6BvnQXQN84C6NtmAfRNswD6lllA2Tfsk2GD1t8C9LcA/S1AfwvQ3wL0twD9LUB/C9DfAvS3AP0tQH8L0N8C9LcA/S1AfwvQ3wL0twD9LUB/C9DfAvS3AP0tQH8LKLX/dfxT4O6w/hagvwXobwH6W4D+FqC/BehvAfpbgP4WoL8F6G8B+luA/hbwf/Ijflohf0AB+rML0J9dgP7sAvRnF6A/uwD92QXozy5Af3YB+rML0J9dgP7sAvRnF6A/uwD92QXozy5Af3YB+rML0J9dgP7sAvRnF6A/uwD92QXozy5Af3YB+rML0J9dgP7sAvRnF6A/uwD92QXozy5Af3YB+rML0J9dgP7sAvRnF6A/uwD92QW89gf1Gda/lAXozy5Af3YB+rML0J9dgP7sAvRnF6A/u4DX7/8N5UtUgP7sAvRnF6A/uwD92QXozy5Af3YB+rML0J9dgP7wAvSHF6C/BehvAfpbgP4WoL8F6G8B+luA/hagvwXobwH6W4D+FqC/BehvAfpbgP4WoL8F6G8B+luA/hagvwVcMHf0RxegP7sA/dkF6M8uQH92AfqzC9CfXYD+7AL0ZxegP7sA/dkF6M8uQH92AfqzC9CfXYD+7AL0ZxegP7sA/dkF6M8uQH92AfqzC9CfXYD+7AL0ZxegP7sA/dkF6M8u4M6IAuQC9GcXoD+7AP3ZBejPLkB/dgH6G4DjS4DjSaDj20DHPwQ5QH8LoPtbAN3ffwfT/S2A7m8BdH8LoPtbAN3fAuj+FkD3twC6vwXQ/S2A7m8BdH8LoPtbAN3fAuj+FkD3twC6vwXQ/S2A7m8BdH8LoPtbAN3fAuj+FkD3twC6vwXQ/S2A7m8BdH8LoPtnfmYBaH8LoPtbAN3fAuj+FkD3twC6vwXQ/S2A7m8BdH8LoPtbAN3fAuj+FkD3twC6vwXQ/S2A7m8BdH8LoPtbAN3fAuj+FlA6/91dC0D7Dw9bANq/Dwe1gFL5WwDd3wLo/hZA97cAur8F0P0tgO5vAXR/C6D796OA69qXyN8C6P4WQPe3ALq/BdD9LYDubwF0fwug+/fhYX16Xf8S+VsA3d8C6P4WQPe3ALq/BdD9LYDubwF0fwug+1sA3d8C6P4WQPe3ALq/BdD9LYDubwF0fwug+1sA3d8C6P4WQPe3ALq/BdD9LYDubwF0fwug+1sA3d8C6P4WQPe3ALq/BdD9LYDubwF0fwug+1sA3d8C6P4WQPe3ALq/BdD9LYDu34cf8pPr+pfI3wLo/hZA97cAur8F0P0tgO5vAXR/C6D7WwDd3wLo/hZA97cAur8F0P0tgO7fjwKG9bcA/S1AfwvQ3wL0twD9LUB/C9DfAvS3AP0tQH8L0N8C9LcA/S1AfwvQ3wL0twD9LUB/C9DfAvS3AP0tQH8L0N8C9PdXRn8L0N8C9LcA/S1AfwvQ3wL0twD9LUB/C9DfAvRnF6A/uwD92QXozy5Af3YB+rML0J9dgP7sAvRnF6A/uwD92QXozy5Af3YB+rML0J9dgP7sAvRnF6A/uwD92QXozy5Af3YB+rML0J9dgP7sAvRnF6A/uwD92QXUm/qTCmjWTz+A2ob+rAI2aqeOv6g/rYDFF48+oz+vgJnnx55o688roD3x7NDb+hML2H564Cn9mQVMPXkH0NSfWUDz5J3ArP7UAmYjImJff2oB+xER4/pzCxiPiAX9uQUsRMSO/twCdiJGjvXnFnA8EvP6kwuYjyX9yQW8Gzf1Jxfwm9jUn1zAn+K2/uQC7sQ9/ckFPIiD1/FPh2t6lrSAr+Kuv//kAv4Zt/QnF7AT6/qTC/hDrOhPLuC9aOhPLqARk/qTC5iM2n39uQXcr0Ws6c8tYC0ipvXnFjAdEfVD/akFHNYjIlb1pxawGhERo239mQW0R09WX9afWcDyk8WHWvoTC2gNPV28oT+xgMaztQe29OcVsDXwfO3BPf1pBewNvrj2WEt/VgGtsdNr3zjSn1TA0Y2X1557pD+ngEdz/7v21RSgfxUKOMv/agrQvwoFnO1/FQXoX4UCzvPvvQD9q1DA+f69FqB/FQq4yL+3AvSvQgEX+/dSgP5VKOAy/+4L0L8KBVzu320B+lehgCL+3RWgfxUKKObfTQH6V6GAov6dF6B/FQoo7t9pAfpXoYBO/DsrQP8qFNCZfycF6F+FAjr1j5greIVIU/9+FlDwZh9Hc52vfaPQVWIbdRX6OfVCN3xs3ehm7bECV4ou1jTo79QK3PJxb6y7tQcvu1q8PSNA/2fmso/2bQ12u/RA48KXge0Jd78MM3Hhbf9ajYEe1h5aPjev5pRbX5aZOvdcsL081OPao6tnfn/A/qyv/mU6E5g989Zfh6ujV3GiOb12+nuEjncWxt3zss34ws7pm7/cX5u+srdotcnGyvqtuwf3bm/eXJofcbfLOSPzS+9vNr88uHtrfaUxWewp+r9H6tE/Bkp26wAAAABJRU5ErkJggg=="></image>
+              </defs>
+            </svg>
+          </div>
+        </button>
+      </span>
+    </label>
+</div>
+                <ul class="catalog__selected-tab-list">
+  <li class="catalog__selected-tab-item txt18 txt18_regular isActive">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White Активное Отбеливание Sensodyne Clinical White Активное Отбеливание </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+  <li class="catalog__selected-tab-item txt18 txt18_regular ">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+  <li class="catalog__selected-tab-item txt18 txt18_regular ">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+  <li class="catalog__selected-tab-item txt18 txt18_regular ">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+  <li class="catalog__selected-tab-item txt18 txt18_regular ">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+  <li class="catalog__selected-tab-item txt18 txt18_regular ">
+    <div class="catalog__selected-tab-img-box">
+      <img src="./assets/images/selectedTabsImg.webp" alt="">
+    </div>
+    <p class="catalog__selected-tab-text txt18 txt18_regular">Sensodyne Clinical White Активное Отбеливание Sensodyne Clinical White Активное Отбеливание </p>
+    <a href="#" class="catalog__selected-tab-download-box">
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--white">
+        <img src="./assets/images/downloadWhite.svg" alt="download">
+      </div>
+      <div class="catalog__selected-tab-svg-box catalog__selected-tab-svg-box--gray">
+        <img src="./assets/images/downloadGray.svg" alt="download">
+      </div>
+    </a>
+  </li>
+</ul>
+
+                <ul class="catalog__main-tab-list">
+    <li class="catalog__main-tab-item txt18 txt18_regular isActive">медиа баннер</li>
+    <li class="catalog__main-tab-item txt18 txt18_regular">мастер баннер</li>
+    <li class="catalog__main-tab-item txt18 txt18_regular">ВИДЕО баннер</li>
+  </ul>
+              </div>
+              <div class="catalog__catalog">
+                <div class="catalog__filters">
+  <div class="catalog__filters-list">
+    <div class="catalog__filters-block">
+      <p class="catalog__filters-title txt18 txt18_medium">Бренд</p>
+
+      <div class="catalog__filters-form-box">
+        <label class="catalog__filters-search-box">
+          <div class="catalog__filters-search-loupe-box">
+            <img src="./assets/images/loupeFilterSearch.svg" alt="search">
+          </div>
+          <input type="text" class="catalog__filters-search-input txt18 txt18_regular" placeholder="Поиск">
+          <button class="catalog__filters-search-clear-btn">
+            <img src="./assets/images/clear.svg" alt="search">
+          </button>
+        </label>
+        <form action="" class="catalog__filters-form txt18 txt18_regular">
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input" checked="">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Sensodyne</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Вольтарен</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Зовиракс</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Корега</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Терафлю</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Отривин</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input name="brand" type="radio" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Бифиформ</span>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <div class="catalog__filters-block">
+      <p class="catalog__filters-title txt18 txt18_medium">Пероид действия</p>
+      <div class="catalog__filters-datepicker-box">
+        <label class="catalog__filters-datepicker-label">
+          <input id="datepicker1" class="catalog__filters-datepicker" readonly="" placeholder="С">
+          <div class="catalog__filters-datepicker-svg-box">
+            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.999585 1.53906L8.57499 8.46047L16.1504 1.53906" stroke="#1D1F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </label>
+        <label class="catalog__filters-datepicker-label">
+          <input id="datepicker2" class="catalog__filters-datepicker" readonly="" placeholder="По">
+          <div class="catalog__filters-datepicker-svg-box">
+            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.999585 1.53906L8.57499 8.46047L16.1504 1.53906" stroke="#1D1F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="catalog__filters-block">
+      <p class="catalog__filters-title txt18 txt18_medium">Площадка</p>
+
+      <div class="catalog__filters-form-box">
+        <label class="catalog__filters-search-box">
+          <div class="catalog__filters-search-loupe-box">
+            <img src="./assets/images/loupeFilterSearch.svg" alt="search">
+          </div>
+          <input type="text" class="catalog__filters-search-input txt18 txt18_regular" placeholder="Поиск">
+          <button class="catalog__filters-search-clear-btn">
+            <img src="./assets/images/clear.svg" alt="search">
+          </button>
+        </label>
+        <form action="" class="catalog__filters-form txt18 txt18_regular">
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Apteka.ru</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Stolichki</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Будь Здоров</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Отдел Сертификации</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Apteka.ru</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Stolichki</span>
+          </label>
+          <label class="catalog__filters-label">
+            <input type="checkbox" class="catalog__filters-input">
+            <span class="catalog__filters-square"></span>
+            <span class="catalog__filters-input-title txt18 txt18_medium">Будь Здоров</span>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <div class="catalog__filters-block">
+      <p class="catalog__filters-title txt18 txt18_medium">Карточек на странице</p>
+      <div class="catalog__filters-count-card-list">
+        <label class="catalog__filters-count-card-label">
+          <input type="radio" name="countCard" class="catalog__filters-count-card-label-input" checked="">
+          <span class="catalog__filters-count-card-text">6</span>
+        </label>
+        <label class="catalog__filters-count-card-label">
+          <input type="radio" name="countCard" class="catalog__filters-count-card-label-input">
+          <span class="catalog__filters-count-card-text">12</span>
+        </label>
+        <label class="catalog__filters-count-card-label">
+          <input type="radio" name="countCard" class="catalog__filters-count-card-label-input">
+          <span class="catalog__filters-count-card-text">18</span>
+        </label>
+        <label class="catalog__filters-count-card-label">
+          <input type="radio" name="countCard" class="catalog__filters-count-card-label-input">
+          <span class="catalog__filters-count-card-text">24</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- <button>тут будет кнопка очищения и возвращения к предыдущей странице</button> -->
+</div>
+
+                <div class="catalog__not-found-box">
+  <div class="catalog__not-found-img-box">
+    <img src="./assets/images/notFound.svg" alt="not found">
+  </div>
+  <div class="catalog__not-found-text-box">
+    <p class="catalog__not-found-title">Ничего не найдено</p>
+    <p class="catalog__not-found-desc txt18 txt18_regular">
+      По вашему запросу ничего не найдено. Попробуйте ввести другой запрос
+    </p>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
